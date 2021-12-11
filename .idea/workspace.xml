@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c9c4bd55-21b1-4d1f-8fc1-77932ec09af5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="c63eb65e-b66c-4c16-b293-ed2d022c449d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,31 +12,31 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
     </option>
+    <expand />
+    <select />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="21vaBaPtsuuOuHLcj3xSJDLYxZg" />
+  <component name="ProjectId" id="21xxI2rXELJejuZKyJf7AV8m2Uv" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="postgresql" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/api/src/main/resources" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Jana\Documents\fax\mag\1.letnik\RSO\EventRegistration\api\src\main\resources" />
-      <recent name="C:\Users\Jana\Documents\fax\mag\1.letnik\RSO\EventRegistration\entities\src\main\resources" />
-      <recent name="C:\Users\Jana\Documents\fax\mag\1.letnik\RSO\EventRegistration\services\src\main\resources" />
-      <recent name="C:\Users\Jana\Documents\fax\mag\1.letnik\RSO\EventRegistration\services\src\main\java\si\fri\rso\skupina15\beans" />
-      <recent name="C:\Users\Jana\Documents\fax\mag\1.letnik\RSO\EventRegistration\entities\src\main\java\si.fri.rso.skupina15.entities" />
-    </key>
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -54,12 +55,12 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c9c4bd55-21b1-4d1f-8fc1-77932ec09af5" name="Default Changelist" comment="" />
-      <created>1638823879626</created>
+      <changelist id="c63eb65e-b66c-4c16-b293-ed2d022c449d" name="Default Changelist" comment="" />
+      <created>1638896457006</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1638823879626</updated>
-      <workItem from="1638823882836" duration="2913000" />
+      <updated>1638896457006</updated>
+      <workItem from="1638896458741" duration="1396000" />
     </task>
     <servers />
   </component>
