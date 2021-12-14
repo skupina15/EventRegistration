@@ -2,9 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c63eb65e-b66c-4c16-b293-ed2d022c449d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/si/fri/rso/skupina15/v1/resources/RegistrationResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/si/fri/rso/skupina15/v1/resources/RegistrationResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/resources/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/resources/config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entities/src/main/java/si.fri.rso.skupina15.entities/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/entities/src/main/java/si/fri/rso/skupina15/entities/Event.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entities/src/main/java/si.fri.rso.skupina15.entities/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/entities/src/main/java/si/fri/rso/skupina15/entities/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entities/src/main/java/si.fri.rso.skupina15.entities/Persone.java" beforeDir="false" afterPath="$PROJECT_DIR$/entities/src/main/java/si/fri/rso/skupina15/entities/Persone.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entities/src/main/java/si.fri.rso.skupina15.entities/Registration.java" beforeDir="false" afterPath="$PROJECT_DIR$/entities/src/main/java/si/fri/rso/skupina15/entities/Registration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entities/src/main/java/si.fri.rso.skupina15.entities/Rent.java" beforeDir="false" afterPath="$PROJECT_DIR$/entities/src/main/java/si/fri/rso/skupina15/entities/Rent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entities/src/main/resources/sql-scripts/init-db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/entities/src/main/resources/sql-scripts/init-db.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/src/main/java/si/fri/rso/skupina15/beans/config/RestProperties.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,7 +46,12 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/entities/src/main/java/si/fri/rso/skupina15/entities" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Jana\Documents\fax\mag\1.letnik\RSO\EventRegistration\entities\src\main\java\si\fri\rso\skupina15\entities" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -61,6 +76,9 @@
       <option name="presentableId" value="Default" />
       <updated>1638896457006</updated>
       <workItem from="1638896458741" duration="1396000" />
+      <workItem from="1639245603534" duration="84000" />
+      <workItem from="1639497362577" duration="757000" />
+      <workItem from="1639498158063" duration="2108000" />
     </task>
     <servers />
   </component>
@@ -72,7 +90,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

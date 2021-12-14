@@ -2,20 +2,23 @@ package si.fri.rso.skupina15.v1.resources;
 
 import com.kumuluz.ee.rest.beans.QueryParameters;
 import si.fri.rso.skupina15.beans.CDI.RegistrationBean;
-import si.fri.rso.skupina15.beans.config.RestProperties;
 import si.fri.rso.skupina15.entities.Registration;
 
+import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.ws.rs.*;
 import javax.ws.rs.core.Context;
+import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriInfo;
 import java.util.List;
 import java.util.logging.Logger;
 
+@ApplicationScoped
+@Path("registrations")
+@Produces(MediaType.APPLICATION_JSON)
+@Consumes(MediaType.APPLICATION_JSON)
 public class RegistrationResource {
-    @Inject
-    private RestProperties restProperties;
 
     private Logger log = Logger.getLogger(RegistrationResource.class.getName());
 

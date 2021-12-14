@@ -9,3 +9,4 @@ INSERT INTO item (id_item, title, description, daily_price, id_persone, tag) VAL
 INSERT INTO event (id_event, title, description, start_date, end_date, id_persone, tag) VALUES (21, 'Climbing school for beginners', 'Basics of climbing', '2021-05-05', '2021-06-06', 3, 'climbing');
 INSERT INTO event (id_event, title, description, start_date, end_date, id_persone, tag) VALUES (22, 'Climbing school 2', 'Climbing school for those who know basics', '2021-07-01', '2021-09-01', 4, 'climbing');
 INSERT INTO event (id_event, title, description, start_date, end_date, id_persone, tag) VALUES (23, 'Climbing seminar', 'Seminar of climbing in America', '2021-08-05', '2021-08-06', 5, 'climbing');
+INSERT INTO registration (id_registration, registration_date, id_persone, id_event) VALUES (31, '2021-03-05', 1, 21)

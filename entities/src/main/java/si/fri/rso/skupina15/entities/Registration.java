@@ -1,5 +1,6 @@
 package si.fri.rso.skupina15.entities;
 
+import javax.json.bind.annotation.JsonbTransient;
 import javax.persistence.*;
 
 @Entity(name = "registration")
@@ -21,10 +22,10 @@ public class Registration {
     @JoinColumn(name = "id_persone")
     private Persone persone;
 
-//    @JsonbTransient
-//    @ManyToOne//(fetch = FetchType.LAZY)
-//    @JoinColumn(name = "id_event")
-//    private Event event;
+    @JsonbTransient
+    @ManyToOne//(fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_event")
+    private Event event;
 
     // Getters and setters
 
@@ -52,11 +53,11 @@ public class Registration {
         this.persone = person;
     }
 
-//    public Event getE() {
-//        return event;
-//    }
-//
-//    public void setE(Event e) {
-//        this.event = e;
-//    }
+    public Event getE() {
+        return event;
+    }
+
+    public void setE(Event e) {
+        this.event = e;
+    }
 }

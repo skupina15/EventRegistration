@@ -74,11 +74,6 @@
                 <version>${kumuluzee-rest.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.kumuluz.ee.config</groupId>
-                <artifactId>kumuluzee-config-consul</artifactId>
-                <version>${kumuluzee-config.version}</version>
-            </dependency>
-            <dependency>
                 <groupId>si.fri.rso.skupina15</groupId>
                 <artifactId>entities</artifactId>
                 <version>${project.version}</version>
