@@ -23,6 +23,6 @@ kumuluzee:
 #        jndi-name: jdbc/Climb
 #      disk-space-health-check:
 #        threshold: 100000
-#rest-properties:
-#  maintenance-mode: false
+rest-properties:
+  maintenance-mode: false
 #  print: Config print

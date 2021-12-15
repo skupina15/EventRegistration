@@ -1,5 +1,6 @@
 package si.fri.rso.skupina15.entities;
 
+import javax.json.bind.annotation.JsonbTransient;
 import javax.persistence.*;
 import java.util.List;
 
@@ -28,9 +29,9 @@ public class Event {
     @Column
     private String end_date;
 
-    //@JsonbTransient
-//    @OneToMany(fetch = FetchType.LAZY, mappedBy = "event",  cascade = CascadeType.REMOVE)
-//    private List<Registration> registrations;
+    @JsonbTransient
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "event",  cascade = CascadeType.REMOVE)
+    private List<Registration> registrations;
 
     @ManyToOne//(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_persone")
