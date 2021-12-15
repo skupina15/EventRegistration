@@ -39,7 +39,7 @@ public class RegistrationResource {
 
     @GET
     @Path("{id}")
-    public Response returnItems(@PathParam("id") Integer id){
+    public Response returnEvents(@PathParam("id") Integer id){
         Registration i = registrationBean.findRegistration(id);
         if (i != null){
             return Response.ok(i).build();
@@ -50,7 +50,7 @@ public class RegistrationResource {
     }
 
     @POST
-    public Response addItem(Registration i){
+    public Response addEvent(Registration i){
         Registration registration = registrationBean.createRegistration(i);
         if(registration == null){
             log.info("Invalid API input.");
@@ -61,7 +61,7 @@ public class RegistrationResource {
 
     @PUT
     @Path("{id}")
-    public Response UpdateItem(@PathParam("id") Integer id, Registration i){
+    public Response UpdateEvent(@PathParam("id") Integer id, Registration i){
         Registration registration = registrationBean.updateRegistration(id, i);
         if(registration == null){
             log.info("Registration for update does not exist");
@@ -72,7 +72,7 @@ public class RegistrationResource {
 
     @DELETE
     @Path("{id}")
-    public Response deleteItem(@PathParam("id") Integer id){
+    public Response deleteEvent(@PathParam("id") Integer id){
         Integer registration = registrationBean.deleteRegistration(id);
         return Response.status(Response.Status.OK).entity(registration).build();
     }
