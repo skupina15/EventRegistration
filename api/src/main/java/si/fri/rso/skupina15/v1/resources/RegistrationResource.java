@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.logging.Logger;
 
 @ApplicationScoped
-@Path("registration")
+@Path("registrations")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 public class RegistrationResource {
@@ -39,7 +39,7 @@ public class RegistrationResource {
 
     @GET
     @Path("{id}")
-    public Response returnEvents(@PathParam("id") Integer id){
+    public Response getRegistration(@PathParam("id") Integer id){
         Registration i = registrationBean.findRegistration(id);
         if (i != null){
             return Response.ok(i).build();
@@ -50,7 +50,7 @@ public class RegistrationResource {
     }
 
     @POST
-    public Response addEvent(Registration i){
+    public Response addRegistration(Registration i){
         Registration registration = registrationBean.createRegistration(i);
         if(registration == null){
             log.info("Invalid API input.");
@@ -61,7 +61,7 @@ public class RegistrationResource {
 
     @PUT
     @Path("{id}")
-    public Response UpdateEvent(@PathParam("id") Integer id, Registration i){
+    public Response UpdateRegistration(@PathParam("id") Integer id, Registration i){
         Registration registration = registrationBean.updateRegistration(id, i);
         if(registration == null){
             log.info("Registration for update does not exist");
@@ -72,7 +72,7 @@ public class RegistrationResource {
 
     @DELETE
     @Path("{id}")
-    public Response deleteEvent(@PathParam("id") Integer id){
+    public Response deleteRegistration(@PathParam("id") Integer id){
         Integer registration = registrationBean.deleteRegistration(id);
         return Response.status(Response.Status.OK).entity(registration).build();
     }

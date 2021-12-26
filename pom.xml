@@ -24,6 +24,7 @@
         <kumuluzee-config.version>1.3.0</kumuluzee-config.version>
         <kumuluzee-health.version>2.4.2</kumuluzee-health.version>
         <kumuluzee-metrics.version>2.3.0</kumuluzee-metrics.version>
+        <kumuluzee-discovery.version>1.0.0</kumuluzee-discovery.version>
 
         <postgresql.version>42.3.0</postgresql.version>
     </properties>
@@ -74,6 +75,11 @@
                 <version>${kumuluzee-rest.version}</version>
             </dependency>
             <dependency>
+                <groupId>com.kumuluz.ee.discovery</groupId>
+                <artifactId>kumuluzee-discovery-etcd</artifactId>
+                <version>${kumuluzee-discovery.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>si.fri.rso.skupina15</groupId>
                 <artifactId>entities</artifactId>
                 <version>${project.version}</version>
@@ -83,6 +89,7 @@
                 <artifactId>services</artifactId>
                 <version>${project.version}</version>
             </dependency>
+
         </dependencies>
     </dependencyManagement>
     <build>

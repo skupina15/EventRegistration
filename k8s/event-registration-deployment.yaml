@@ -22,6 +22,10 @@ spec:
               value: bukqntkr
             - name: KUMULUZEE_DATASOURCES0_PASSWORD
               value: E2SE5Ru_O6OGntAqsOJqi-7QClTANW6d
+            - name: KUMULUZEE_DISCOVERY_CLUSTER
+              value: minikube
+            - name: KUMULUZEE_DISCOVERY_ETCD_HOSTS
+              value: http://etcd:2379
               #valueFrom:
               #  secretKeyRef:
               #    name: pg-pass
@@ -52,8 +56,8 @@ metadata:
 spec:
   type: LoadBalancer
   ports:
-    - port: 3333
+    - port: 8080
       protocol: TCP
-      targetPort: server
+      targetPort: 8080
   selector:
     app: event-registration

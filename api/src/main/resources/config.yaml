@@ -7,22 +7,20 @@ kumuluzee:
     base-url: http://localhost:8080
     http:
       port: 8080
+  discovery:
+    etcd:
+      hosts: http://10.0.227.22:2379
+    ttl: 20
+    ping-interval: 15
   datasources:
     - jndi-name: jdbc/Climb
-      # connection-url: jdbc:postgresql://climb-db:5432/climb-db
+#       connection-url: jdbc:postgresql://climb-db:5432/climb-db
       connection-url: jdbc:postgresql://localhost:5432/climb-db
       username: dbuser
       password: postgres
 #      connection-url: jdbc:postgresql://fanny.db.elephantsql.com:5432/bukqntkr
 #      username: bukqntkr
 #      password: E2SE5Ru_O6OGntAqsOJqi-7QClTANW6d
-#  health:
-#    checks:
-#      data-source-health-check:
-#        type: liveness
-#        jndi-name: jdbc/Climb
-#      disk-space-health-check:
-#        threshold: 100000
 rest-properties:
   maintenance-mode: false
 #  print: Config print

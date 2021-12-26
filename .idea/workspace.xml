@@ -2,10 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c63eb65e-b66c-4c16-b293-ed2d022c449d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/si/fri/rso/skupina15/v1/resources/DiscoveryResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/resources/webapp/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/si/fri/rso/skupina15/v1/EventRegistrationApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/si/fri/rso/skupina15/v1/EventRegistrationApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/src/main/java/si/fri/rso/skupina15/v1/resources/RegistrationResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/si/fri/rso/skupina15/v1/resources/RegistrationResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/resources/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/resources/config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entities/entities.iml" beforeDir="false" afterPath="$PROJECT_DIR$/entities/entities.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/k8s/event-registration-deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/event-registration-deployment.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -58,6 +65,13 @@
     </expand>
     <select />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -69,6 +83,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -105,7 +120,13 @@
       <workItem from="1639245603534" duration="84000" />
       <workItem from="1639497362577" duration="757000" />
       <workItem from="1639498158063" duration="4396000" />
-      <workItem from="1639592361219" duration="7039000" />
+      <workItem from="1639592361219" duration="8355000" />
+      <workItem from="1639601493562" duration="190000" />
+      <workItem from="1640008345078" duration="6322000" />
+      <workItem from="1640268620445" duration="1420000" />
+      <workItem from="1640360436020" duration="397000" />
+      <workItem from="1640360889637" duration="4547000" />
+      <workItem from="1640462687130" duration="10806000" />
     </task>
     <servers />
   </component>
