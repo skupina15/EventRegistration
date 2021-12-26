@@ -15,12 +15,12 @@ kumuluzee:
   datasources:
     - jndi-name: jdbc/Climb
 #       connection-url: jdbc:postgresql://climb-db:5432/climb-db
-      connection-url: jdbc:postgresql://localhost:5432/climb-db
-      username: dbuser
-      password: postgres
-#      connection-url: jdbc:postgresql://fanny.db.elephantsql.com:5432/bukqntkr
-#      username: bukqntkr
-#      password: E2SE5Ru_O6OGntAqsOJqi-7QClTANW6d
+#      connection-url: jdbc:postgresql://localhost:5432/climb-db
+#      username: dbuser
+#      password: postgres
+      connection-url: jdbc:postgresql://fanny.db.elephantsql.com:5432/bukqntkr
+      username: bukqntkr
+      password: E2SE5Ru_O6OGntAqsOJqi-7QClTANW6d
 rest-properties:
   maintenance-mode: false
 #  print: Config print
