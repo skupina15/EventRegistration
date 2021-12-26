@@ -15,6 +15,7 @@ spec:
       containers:
         - image: jstrem/registration-image:latest
           name: event-catalogue
+          imagePullPolicy: "Always"
           env:
             - name: KUMULUZEE_DATASOURCES0_CONNECTIONURL
               value: jdbc:postgresql://fanny.db.elephantsql.com:5432/bukqntkr

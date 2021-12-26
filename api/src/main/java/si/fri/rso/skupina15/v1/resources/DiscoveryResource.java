@@ -14,7 +14,7 @@ import java.util.logging.Logger;
 
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
-@Path("discover_registration")
+@Path("discover_events")
 @ApplicationScoped
 public class DiscoveryResource {
 
