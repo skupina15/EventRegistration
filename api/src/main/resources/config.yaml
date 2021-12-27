@@ -22,6 +22,7 @@ kumuluzee:
       connection-url: jdbc:postgresql://fanny.db.elephantsql.com:5432/bukqntkr
       username: bukqntkr
       password: E2SE5Ru_O6OGntAqsOJqi-7QClTANW6d
+      max-pool-size: 1
 rest-properties:
   maintenance-mode: false
 #  print: Config print
