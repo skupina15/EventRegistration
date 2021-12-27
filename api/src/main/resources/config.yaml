@@ -10,7 +10,7 @@ kumuluzee:
   discovery:
     cluster: 1
     etcd:
-      hosts: http://20.88.165.164:2379
+      hosts: http://localhost:2379
     ttl: 20
     ping-interval: 15
   datasources:
