@@ -7,6 +7,11 @@ kumuluzee:
     base-url: http://localhost:8080
     http:
       port: 8080
+  config:
+    start-retry-delay-ms: 20
+    max-retry-delay-ms: 900000
+    etcd:
+      hosts: http://localhost:2379
   discovery:
     cluster: 1
     etcd:

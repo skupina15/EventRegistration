@@ -17,7 +17,8 @@ az aks get-credentials --resource-group climbapp_group_1638641310048 --name clim
 kubectl get nodes
 // cd to your kubernetes deployment.yaml (C:/Users/Jana/Documents/fax/mag/1.letnik/RSO/EventRegistration/k8s)
 // kubectl create -f event-registration-deployment.yaml
-kubectl apply -f event-registration-deployment.yaml
+kubectl apply -f event-registration-deployment.yaml --namespace climb
+kubectl --namespace climb get services -o wide
 kubectl get services
 [EXTERNAL-IP]:[PORT]/[REST path] in browser
 kubectl get services
