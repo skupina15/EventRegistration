@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c63eb65e-b66c-4c16-b293-ed2d022c449d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/si/fri/rso/skupina15/v1/resources/DiscoveryResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/si/fri/rso/skupina15/v1/resources/DiscoveryResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/event-registration-deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/event-registration-deployment.yaml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -118,7 +118,7 @@
       <workItem from="1640360436020" duration="397000" />
       <workItem from="1640360889637" duration="4547000" />
       <workItem from="1640462687130" duration="10806000" />
-      <workItem from="1640522525812" duration="5189000" />
+      <workItem from="1640522525812" duration="9254000" />
     </task>
     <servers />
   </component>
