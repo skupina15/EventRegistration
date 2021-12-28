@@ -19,15 +19,10 @@ kumuluzee:
   rest-client:
     registrations:
       - class: notification-api
-        url: http://localhost:8081/v1
+        url: http://20.120.67.65/notification/v1
         read-timeout: 5000
-#  health:
-#    checks:
-#      data-source-health-check:
-#        type: liveness
-#        jndi-name: jdbc/Climb
-#      disk-space-health-check:
-#        threshold: 100000
+  config:
+    consul:
+      agent: http://20.120.67.65/consul
 rest-properties:
-  maintenance-mode: true
-#  print: Config print
+  maintenance-mode: false
