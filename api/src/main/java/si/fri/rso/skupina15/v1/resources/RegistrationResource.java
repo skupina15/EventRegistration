@@ -4,6 +4,7 @@ import com.kumuluz.ee.rest.beans.QueryParameters;
 import org.eclipse.microprofile.rest.client.inject.RestClient;
 import si.fri.rso.skupina15.beans.CDI.RegistrationBean;
 import si.fri.rso.skupina15.beans.config.RestProperties;
+import si.fri.rso.skupina15.config.Properties;
 import si.fri.rso.skupina15.dtos.NotificationDTO;
 import si.fri.rso.skupina15.entities.Registration;
 import si.fri.rso.skupina15.services.NotificationApi;
@@ -31,6 +32,9 @@ public class RegistrationResource {
 
     @Inject
     private RegistrationBean registrationBean;
+
+    @Inject
+    private Properties properties;
 
     @Context
     protected UriInfo uriInfo;
@@ -68,16 +72,19 @@ public class RegistrationResource {
             return Response.status(Response.Status.BAD_REQUEST).build();
         }
 
-        // start image processing over async API
-        CompletionStage<String> stringCompletionStage =
-                notificationApi.processImageAsynch(new NotificationDTO(i.getEvent().getHost().getEmail(),
-                        i.getPersone().getUser_name(), i.getPersone().getEmail(), i.getEvent().getTitle()));
+        if(!properties.getMaintenece_mode()){
+            log.info("sending");
+            // start image processing over async API
+            CompletionStage<String> stringCompletionStage =
+                    notificationApi.processImageAsynch(new NotificationDTO(i.getEvent().getHost().getEmail(),
+                            i.getPersone().getUser_name(), i.getPersone().getEmail(), i.getEvent().getTitle()));
 
-        stringCompletionStage.whenComplete((s, throwable) -> System.out.println(s));
-        stringCompletionStage.exceptionally(throwable -> {
-            log.severe(throwable.getMessage());
-            return throwable.getMessage();
-        });
+            stringCompletionStage.whenComplete((s, throwable) -> System.out.println(s));
+            stringCompletionStage.exceptionally(throwable -> {
+                log.severe(throwable.getMessage());
+                return throwable.getMessage();
+            });
+        }
 
         return Response.status(Response.Status.CREATED).entity(registration).build();
     }

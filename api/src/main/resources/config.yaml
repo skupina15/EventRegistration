@@ -29,5 +29,5 @@ kumuluzee:
 #      disk-space-health-check:
 #        threshold: 100000
 rest-properties:
-  maintenance-mode: false
+  maintenance-mode: true
 #  print: Config print
