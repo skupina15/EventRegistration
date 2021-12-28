@@ -19,7 +19,7 @@ kumuluzee:
   rest-client:
     registrations:
       - class: notification-api
-        url: http://20.120.67.65/notification/v1
+        url: http://20.120.67.65/notifications/v1
         read-timeout: 5000
   config:
     consul:
