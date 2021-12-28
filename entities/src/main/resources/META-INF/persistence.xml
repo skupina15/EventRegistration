@@ -10,7 +10,7 @@
         <class>si.fri.rso.skupina15.entities.Rent</class>
 
         <properties>
-            <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/> <!-- drops existing database and creaates a new one-->
+            <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/> <!-- drops existing database and creates a new one-->
             <property name="javax.persistence.schema-generation.create-source" value="metadata"/>
             <property name="javax.persistence.sql-load-script-source" value="sql-scripts/init-db.sql"/>
             <property name="javax.persistence.schema-generation.drop-source" value="metadata"/>

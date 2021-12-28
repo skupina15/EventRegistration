@@ -27,9 +27,11 @@ public class Persone {
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "host",  cascade = CascadeType.REMOVE)
     private List<Event> events;
 
+    @JsonbTransient
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "persone",  cascade = CascadeType.REMOVE)
     private List<Registration> registrations;
 
+    @JsonbTransient
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "persone",  cascade = CascadeType.REMOVE)
     private List<Rent> rentals;
 

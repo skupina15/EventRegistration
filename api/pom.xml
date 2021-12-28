@@ -41,6 +41,10 @@
             <groupId>si.fri.rso.skupina15</groupId>
             <artifactId>services</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.kumuluz.ee.discovery</groupId>
+            <artifactId>kumuluzee-discovery-etcd</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

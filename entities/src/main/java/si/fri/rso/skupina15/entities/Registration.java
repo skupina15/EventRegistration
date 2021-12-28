@@ -1,6 +1,5 @@
 package si.fri.rso.skupina15.entities;
 
-import javax.json.bind.annotation.JsonbTransient;
 import javax.persistence.*;
 
 @Entity(name = "registration")
