@@ -25,6 +25,8 @@
         <kumuluzee-health.version>2.4.2</kumuluzee-health.version>
         <kumuluzee-metrics.version>2.3.0</kumuluzee-metrics.version>
 
+        <kumuluzee-rest-client.version>1.4.1.2</kumuluzee-rest-client.version>
+
         <postgresql.version>42.3.0</postgresql.version>
     </properties>
 
@@ -57,7 +59,6 @@
                 <artifactId>kumuluzee-health</artifactId>
                 <version>${kumuluzee-health.version}</version>
             </dependency>
-
             <dependency>
                 <groupId>com.kumuluz.ee.metrics</groupId>
                 <artifactId>kumuluzee-metrics-core</artifactId>
@@ -73,11 +74,11 @@
                 <artifactId>kumuluzee-rest-core</artifactId>
                 <version>${kumuluzee-rest.version}</version>
             </dependency>
-            <dependency>
+            <!--<dependency>
                 <groupId>com.kumuluz.ee.config</groupId>
                 <artifactId>kumuluzee-config-consul</artifactId>
                 <version>${kumuluzee-config.version}</version>
-            </dependency>
+            </dependency>-->
             <dependency>
                 <groupId>si.fri.rso.skupina15</groupId>
                 <artifactId>entities</artifactId>
@@ -87,6 +88,11 @@
                 <groupId>si.fri.rso.skupina15</groupId>
                 <artifactId>services</artifactId>
                 <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kumuluz.ee.rest-client</groupId>
+                <artifactId>kumuluzee-rest-client</artifactId>
+                <version>${kumuluzee-rest-client.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

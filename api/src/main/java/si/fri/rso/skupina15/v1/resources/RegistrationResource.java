@@ -1,9 +1,12 @@
 package si.fri.rso.skupina15.v1.resources;
 
 import com.kumuluz.ee.rest.beans.QueryParameters;
+import org.eclipse.microprofile.rest.client.inject.RestClient;
 import si.fri.rso.skupina15.beans.CDI.RegistrationBean;
 import si.fri.rso.skupina15.beans.config.RestProperties;
+import si.fri.rso.skupina15.dtos.NotificationDTO;
 import si.fri.rso.skupina15.entities.Registration;
+import si.fri.rso.skupina15.services.NotificationApi;
 
 import javax.inject.Inject;
 import javax.ws.rs.*;
@@ -11,6 +14,7 @@ import javax.ws.rs.core.Context;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriInfo;
 import java.util.List;
+import java.util.concurrent.CompletionStage;
 import java.util.logging.Logger;
 
 public class RegistrationResource {
@@ -24,6 +28,10 @@ public class RegistrationResource {
 
     @Context
     protected UriInfo uriInfo;
+
+    @Inject
+    @RestClient
+    private NotificationApi notificationApi;
 
     @GET
     public Response getRegistrations() {
@@ -53,6 +61,18 @@ public class RegistrationResource {
             log.info("Invalid API input.");
             return Response.status(Response.Status.BAD_REQUEST).build();
         }
+
+        // start image processing over async API
+        CompletionStage<String> stringCompletionStage =
+                notificationApi.processImageAsynch(new NotificationDTO(i.getEvent().getHost().getEmail(),
+                        i.getPersone().getUser_name(), i.getPersone().getEmail(), i.getEvent().getTitle()));
+
+        stringCompletionStage.whenComplete((s, throwable) -> System.out.println(s));
+        stringCompletionStage.exceptionally(throwable -> {
+            log.severe(throwable.getMessage());
+            return throwable.getMessage();
+        });
+
         return Response.status(Response.Status.CREATED).entity(registration).build();
     }
 
