@@ -1,6 +1,6 @@
 package si.fri.rso.skupina15.v1.resources;
 
-import com.kumuluz.ee.discovery.annotations.DiscoverService;
+//import com.kumuluz.ee.discovery.annotations.DiscoverService;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.context.RequestScoped;
@@ -11,7 +11,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.logging.Logger;
 
-
+/*
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 @Path("discover_events")
@@ -78,4 +78,4 @@ public class DiscoveryResource {
 //    }
 
 }
-
+*/
