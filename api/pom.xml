@@ -45,6 +45,14 @@
             <groupId>com.kumuluz.ee.discovery</groupId>
             <artifactId>kumuluzee-discovery-etcd</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.kumuluz.ee.openapi</groupId>
+            <artifactId>kumuluzee-openapi</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.kumuluz.ee.openapi</groupId>
+            <artifactId>kumuluzee-openapi-ui</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
