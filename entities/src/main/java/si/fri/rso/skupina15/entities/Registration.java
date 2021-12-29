@@ -22,10 +22,6 @@ public class Registration {
     @JoinColumn(name = "id_persone")
     private Persone persone;
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 9fe8021ad0c5be16f35e4ede81ae6930ad9d6429
     @ManyToOne//(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_event")
     private Event event;
