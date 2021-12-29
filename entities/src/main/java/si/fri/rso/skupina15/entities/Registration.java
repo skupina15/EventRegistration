@@ -22,7 +22,6 @@ public class Registration {
     @JoinColumn(name = "id_persone")
     private Persone persone;
 
-    @JsonbTransient
     @ManyToOne//(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_event")
     private Event event;

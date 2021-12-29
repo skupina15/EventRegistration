@@ -26,3 +26,6 @@ kubectl get deployments
 kubectl get pods
 kubectl logs event-registration-deployment-68744cc4fc-????
 kubectl delete pod [image name]
+
+//discovery
+docker run --rm --name etcd-browser -p 0.0.0.0:8000:8000 --env ETCD_HOST=52.226.200.247 --env ETCD_PORT=2379 -t -i etcd-browser

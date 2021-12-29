@@ -28,6 +28,16 @@ kumuluzee:
       username: bukqntkr
       password: E2SE5Ru_O6OGntAqsOJqi-7QClTANW6d
       max-pool-size: 1
+  cors-filter:
+    servlet:
+      allow-generic-http-requests: true
+      allow-origin: "*"
+    annotations:
+      my-resource:
+        allow-origin: "http://localhost:4200"
+        allow-subdomains: true
+        supported-methods: "GET, POST, DELETE, HEAD, OPTIONS, PUT"
 rest-properties:
   maintenance-mode: false
 #  print: Config print
+
