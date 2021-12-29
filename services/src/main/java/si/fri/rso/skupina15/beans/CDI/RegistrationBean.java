@@ -42,8 +42,16 @@ public class RegistrationBean {
     @Transactional
     public Registration createRegistration(Registration registration){
         if(registration != null) {
-            if(registration.getId_registration() == null) {
-                log.info("Can't create new registration. ID is not defined.");
+            if(registration.getEvent() == null) {
+                log.info("Can't create new registration. ID event is not defined.");
+                return null;
+            }
+            if(registration.getPersone() == null) {
+                log.info("Can't create new registration. ID registration is not defined.");
+                return null;
+            }
+            if(registration.getRegistration_date() == null) {
+                log.info("Can't create new registration. Date is not defined.");
                 return null;
             }
 
