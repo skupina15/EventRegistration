@@ -13,7 +13,7 @@ spec:
         app: event-registration
     spec:
       containers:
-        - image: jstrem/registration-image:2021-12-30-03-04-43
+        - image: jstrem/registration-image:2021-12-30-06-07-36
           name: event-registration
           env:
             - name: KUMULUZEE_DATASOURCES0_CONNECTIONURL

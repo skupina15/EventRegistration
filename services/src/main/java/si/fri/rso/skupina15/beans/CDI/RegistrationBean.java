@@ -2,6 +2,7 @@ package si.fri.rso.skupina15.beans.CDI;
 
 import com.kumuluz.ee.rest.beans.QueryParameters;
 import com.kumuluz.ee.rest.utils.JPAUtils;
+import si.fri.rso.skupina15.entities.Persone;
 import si.fri.rso.skupina15.entities.Registration;
 
 import javax.annotation.PostConstruct;

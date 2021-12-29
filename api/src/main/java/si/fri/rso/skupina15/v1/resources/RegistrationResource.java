@@ -105,16 +105,20 @@ public class RegistrationResource {
 
         if(!properties.getMaintenece_mode()){
             log.info("sending");
-            // start image processing over async API
-            CompletionStage<String> stringCompletionStage =
-                    notificationApi.processImageAsynch(new NotificationDTO(i.getEvent().getHost().getEmail(),
-                            i.getPersone().getUser_name(), i.getPersone().getEmail(), i.getEvent().getTitle()));
+            if(i.getEvent().getHost() != null && i.getPersone().getUser_name() != null &&
+                    i.getPersone().getEmail() != null && i.getEvent().getTitle() != null) {
 
-            stringCompletionStage.whenComplete((s, throwable) -> System.out.println(s));
-            stringCompletionStage.exceptionally(throwable -> {
-                log.severe(throwable.getMessage());
-                return throwable.getMessage();
-            });
+                // start image processing over async API
+                CompletionStage<String> stringCompletionStage =
+                        notificationApi.processImageAsynch(new NotificationDTO(i.getEvent().getHost().getEmail(),
+                                i.getPersone().getUser_name(), i.getPersone().getEmail(), i.getEvent().getTitle()));
+
+                stringCompletionStage.whenComplete((s, throwable) -> System.out.println(s));
+                stringCompletionStage.exceptionally(throwable -> {
+                    log.severe(throwable.getMessage());
+                    return throwable.getMessage();
+                });
+            }
         }
 
         return Response.status(Response.Status.CREATED).entity(registration).build();
