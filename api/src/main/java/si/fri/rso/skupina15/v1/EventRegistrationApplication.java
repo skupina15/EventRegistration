@@ -1,16 +1,14 @@
 package si.fri.rso.skupina15.v1;
 
-<<<<<<< HEAD
 import com.kumuluz.ee.cors.annotations.CrossOrigin;
 import com.kumuluz.ee.discovery.annotations.RegisterService;
-=======
 //import com.kumuluz.ee.discovery.annotations.RegisterService;
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.annotations.info.Contact;
 import io.swagger.v3.oas.annotations.info.Info;
 import io.swagger.v3.oas.annotations.info.License;
 import io.swagger.v3.oas.annotations.servers.Server;
->>>>>>> 9fe8021ad0c5be16f35e4ede81ae6930ad9d6429
+
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;

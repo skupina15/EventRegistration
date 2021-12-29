@@ -16,7 +16,6 @@ kumuluzee:
       connection-url: jdbc:postgresql://fanny.db.elephantsql.com:5432/bukqntkr
       username: bukqntkr
       password: E2SE5Ru_O6OGntAqsOJqi-7QClTANW6d
-<<<<<<< HEAD
       max-pool-size: 1
   cors-filter:
     servlet:
@@ -27,11 +26,6 @@ kumuluzee:
         allow-origin: "http://localhost:4200"
         allow-subdomains: true
         supported-methods: "GET, POST, DELETE, HEAD, OPTIONS, PUT"
-rest-properties:
-  maintenance-mode: false
-#  print: Config print
-
-=======
   rest-client:
     registrations:
       - class: notification-api
@@ -42,4 +36,4 @@ rest-properties:
       agent: http://20.120.67.65/consul
 rest-properties:
   maintenance-mode: false
->>>>>>> 9fe8021ad0c5be16f35e4ede81ae6930ad9d6429
+

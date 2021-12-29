@@ -26,12 +26,9 @@
         <kumuluzee-rest-client.version>1.4.1.2</kumuluzee-rest-client.version>
         <kumuluzee-metrics.version>2.3.0</kumuluzee-metrics.version>
         <kumuluzee-discovery.version>1.0.0</kumuluzee-discovery.version>
-<<<<<<< HEAD
         <kumuluzee-cors.version>1.0.5</kumuluzee-cors.version>
-
-=======
         <kumuluzee-openapi.version>1.0.1</kumuluzee-openapi.version>
->>>>>>> 9fe8021ad0c5be16f35e4ede81ae6930ad9d6429
+
         <postgresql.version>42.3.0</postgresql.version>
     </properties>
 
