@@ -111,11 +111,12 @@ public class RegistrationResource {
         if(!properties.getMaintenece_mode()){
             log.info("sending");
             Persone p = userBean.findPersone(registration.getPersone().getId_persone());
-            if(p.getEmail() != null && p.getUser_name() != null && i.getEvent().getHost().getEmail() != null ) {
+            Persone host = userBean.findPersone(registration.getEvent().getHost().getId_persone());
+            if(p.getEmail() != null && p.getUser_name() != null && host.getEmail() != null ) {
 
                 // start image processing over async API
                 CompletionStage<String> stringCompletionStage =
-                        notificationApi.processImageAsynch(new NotificationDTO(i.getEvent().getHost().getEmail(),
+                        notificationApi.processImageAsynch(new NotificationDTO(host.getEmail(),
                                 p.getUser_name(), p.getEmail(), i.getEvent().getTitle()));
 
                 stringCompletionStage.whenComplete((s, throwable) -> System.out.println(s));
