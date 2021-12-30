@@ -11,10 +11,12 @@ import io.swagger.v3.oas.annotations.parameters.RequestBody;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import org.eclipse.microprofile.rest.client.inject.RestClient;
 import si.fri.rso.skupina15.beans.CDI.RegistrationBean;
+import si.fri.rso.skupina15.beans.CDI.UserBean;
 import si.fri.rso.skupina15.beans.config.RestProperties;
 import si.fri.rso.skupina15.config.Properties;
 import si.fri.rso.skupina15.dtos.NotificationDTO;
 import si.fri.rso.skupina15.entities.Item;
+import si.fri.rso.skupina15.entities.Persone;
 import si.fri.rso.skupina15.entities.Registration;
 import si.fri.rso.skupina15.services.NotificationApi;
 
@@ -41,6 +43,9 @@ public class RegistrationResource {
 
     @Inject
     private RegistrationBean registrationBean;
+
+    @Inject
+    private UserBean userBean;
 
     @Inject
     private Properties properties;
@@ -105,13 +110,13 @@ public class RegistrationResource {
 
         if(!properties.getMaintenece_mode()){
             log.info("sending");
-            if(i.getEvent().getHost() != null && i.getPersone().getUser_name() != null &&
-                    i.getPersone().getEmail() != null && i.getEvent().getTitle() != null) {
+            Persone p = userBean.findPersone(registration.getPersone().getId_persone());
+            if(p.getEmail() != null && p.getUser_name() != null && i.getEvent().getHost().getEmail() != null ) {
 
                 // start image processing over async API
                 CompletionStage<String> stringCompletionStage =
                         notificationApi.processImageAsynch(new NotificationDTO(i.getEvent().getHost().getEmail(),
-                                i.getPersone().getUser_name(), i.getPersone().getEmail(), i.getEvent().getTitle()));
+                                p.getUser_name(), p.getEmail(), i.getEvent().getTitle()));
 
                 stringCompletionStage.whenComplete((s, throwable) -> System.out.println(s));
                 stringCompletionStage.exceptionally(throwable -> {
