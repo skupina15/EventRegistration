@@ -124,6 +124,8 @@ public class RegistrationResource {
                     log.severe(throwable.getMessage());
                     return throwable.getMessage();
                 });
+            } else {
+                log.info("Incomplete registration");
             }
         }
 
