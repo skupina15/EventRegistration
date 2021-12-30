@@ -27,6 +27,7 @@ import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriInfo;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletionStage;
 import java.util.logging.Logger;
@@ -89,6 +90,27 @@ public class RegistrationResource {
             return Response.ok(i).build();
         }
         else{
+            return Response.status(Response.Status.NOT_FOUND).build();
+        }
+    }
+
+    @GET
+    @Path("user/{id}")
+    public Response getUserRegistrations(@Parameter(description = "The id of user", required = true)
+                                    @PathParam("id") Integer id){
+        QueryParameters query = QueryParameters.query(uriInfo.getRequestUri().getQuery()).build();
+        List<Registration> regs = registrationBean.findAllRegistrations(query);
+        if (regs != null){
+            List<Registration> mine = new ArrayList<>();
+
+            for (Registration r : regs){
+                if(r.getPersone().getId_persone() == id){
+                    mine.add(r);
+                }
+            }
+            return Response.ok(mine).header("X-Total-Count", mine.size()).build();
+        } else
+            {
             return Response.status(Response.Status.NOT_FOUND).build();
         }
     }
