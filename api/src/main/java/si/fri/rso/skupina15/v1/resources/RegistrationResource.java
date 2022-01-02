@@ -138,12 +138,11 @@ public class RegistrationResource {
         }
 
         QueryParameters query = QueryParameters.query(uriInfo.getRequestUri().getQuery()).build();
-        Long count = registrationBean.registrationsCount(query);
         List<Registration> registrations = registrationBean.findAllRegistrations(query);
         for (Registration r : registrations){
             if (r.getPersone().getId_persone().equals(registration.getPersone().getId_persone()) &&
                     r.getEvent().getId_event().equals(registration.getEvent().getId_event())){
-                log.info("Registration on that event for than person already exists.");
+                log.info("Registration on that event for that person already exists.");
                 return Response.status(Response.Status.BAD_REQUEST).build();
             }
         }
