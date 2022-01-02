@@ -131,20 +131,20 @@ public class RegistrationResource {
     @POST
     public Response addRegistration(@RequestBody(description = "Created registration object", required = true,
             content = @Content(schema = @Schema(implementation = Registration.class))) Registration i){
+        QueryParameters query = QueryParameters.query(uriInfo.getRequestUri().getQuery()).build();
+        List<Registration> registrations = registrationBean.findAllRegistrations(query);
+        for (Registration r : registrations){
+            if (r.getPersone().getId_persone().equals(i.getPersone().getId_persone()) &&
+                    r.getEvent().getId_event().equals(i.getEvent().getId_event())){
+                log.info("Registration on that event for that person already exists.");
+                return Response.status(Response.Status.BAD_REQUEST).build();
+            }
+        }
+
         Registration registration = registrationBean.createRegistration(i);
         if(registration == null){
             log.info("Invalid API input.");
             return Response.status(Response.Status.BAD_REQUEST).build();
-        }
-
-        QueryParameters query = QueryParameters.query(uriInfo.getRequestUri().getQuery()).build();
-        List<Registration> registrations = registrationBean.findAllRegistrations(query);
-        for (Registration r : registrations){
-            if (r.getPersone().getId_persone().equals(registration.getPersone().getId_persone()) &&
-                    r.getEvent().getId_event().equals(registration.getEvent().getId_event())){
-                log.info("Registration on that event for that person already exists.");
-                return Response.status(Response.Status.BAD_REQUEST).build();
-            }
         }
 
         if(!properties.getMaintenece_mode()){
