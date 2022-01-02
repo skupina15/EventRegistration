@@ -94,6 +94,13 @@ public class RegistrationResource {
         }
     }
 
+    @Operation(description = "Returns a list of user's registrations.", summary = "List of user's registrations", tags = "registration", responses = {
+            @ApiResponse(responseCode = "200",
+                    description = "List of user's registrations",
+                    content = @Content(
+                            array = @ArraySchema(schema = @Schema(implementation = Registration.class))),
+                    headers = {@Header(name = "X-Total-Count", schema = @Schema(type = "integer"))}
+            )})
     @GET
     @Path("user/{id}")
     public Response getUserRegistrations(@Parameter(description = "The id of user", required = true)
@@ -128,6 +135,17 @@ public class RegistrationResource {
         if(registration == null){
             log.info("Invalid API input.");
             return Response.status(Response.Status.BAD_REQUEST).build();
+        }
+
+        QueryParameters query = QueryParameters.query(uriInfo.getRequestUri().getQuery()).build();
+        Long count = registrationBean.registrationsCount(query);
+        List<Registration> registrations = registrationBean.findAllRegistrations(query);
+        for (Registration r : registrations){
+            if (r.getPersone().getId_persone().equals(registration.getPersone().getId_persone()) &&
+                    r.getEvent().getId_event().equals(registration.getEvent().getId_event())){
+                log.info("Registration on that event for than person already exists.");
+                return Response.status(Response.Status.BAD_REQUEST).build();
+            }
         }
 
         if(!properties.getMaintenece_mode()){
