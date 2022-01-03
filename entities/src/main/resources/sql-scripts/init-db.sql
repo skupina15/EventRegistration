@@ -17,7 +17,7 @@ INSERT INTO event (id_event, title, description, start_date, end_date, id_person
 INSERT INTO event (id_event, title, description, start_date, end_date, id_persone, tag) VALUES (24, 'Rodica hike', 'Tour on Rodica Mountain', '2022-08-05', '2022-08-06', 5, 'hiking');
 INSERT INTO registration (id_registration, registration_date, id_persone, id_event) VALUES (31, '2021-03-05', 1, 23)
 INSERT INTO registration (id_registration, registration_date, id_persone, id_event) VALUES (32, '2021-09-05', 1, 22)
-INSERT INTO registration (id_registration, registration_date, id_persone, id_event) VALUES (32, '2021-09-05', 1, 24)
+INSERT INTO registration (id_registration, registration_date, id_persone, id_event) VALUES (33, '2021-09-05', 1, 24)
 INSERT INTO rent (id_rent, registration_date, id_persone, id_item) VALUES (41, '2021-03-05', 1, 13)
 INSERT INTO rent (id_rent, registration_date, id_persone, id_item) VALUES (42, '2021-06-05', 1, 12)
 INSERT INTO rent (id_rent, registration_date, id_persone, id_item) VALUES (43, '2021-06-07', 1, 16)
