@@ -13,7 +13,7 @@ spec:
         app: event-registration
     spec:
       containers:
-        - image: jstrem/registration-image:2022-01-03-04-51-56
+        - image: jstrem/registration-image:2022-01-03-21-13-32
           name: event-registration
           env:
             - name: KUMULUZEE_DATASOURCES0_CONNECTIONURL
@@ -21,7 +21,10 @@ spec:
             - name: KUMULUZEE_DATASOURCES0_USERNAME
               value: bukqntkr
             - name: KUMULUZEE_DATASOURCES0_PASSWORD
-              value: E2SE5Ru_O6OGntAqsOJqi-7QClTANW6d
+              valueFrom:
+                secretKeyRef:
+                  name: mysecret
+                  key: KUMULUZEE_DATASOURCES0_PASSWORD
             - name: KUMULUZEE_DISCOVERY_CLUSTER
               value: minikube
             - name: KUMULUZEE_DISCOVERY_ETCD_HOSTS
