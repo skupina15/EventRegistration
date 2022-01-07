@@ -28,12 +28,18 @@
         <kumuluzee-discovery.version>1.0.0</kumuluzee-discovery.version>
         <kumuluzee-cors.version>1.0.5</kumuluzee-cors.version>
         <kumuluzee-openapi.version>1.0.1</kumuluzee-openapi.version>
+        <kumuluzee-logs.version>1.4.2</kumuluzee-logs.version>
 
         <postgresql.version>42.3.0</postgresql.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <artifactId>kumuluzee-logs-log4j2</artifactId>
+                <groupId>com.kumuluz.ee.logs</groupId>
+                <version>${kumuluzee-logs.version}</version>
+            </dependency>
             <dependency>
                 <groupId>com.kumuluz.ee.cors</groupId>
                 <artifactId>kumuluzee-cors</artifactId>

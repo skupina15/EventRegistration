@@ -12,6 +12,7 @@
     <artifactId>services</artifactId>
 
     <dependencies>
+
         <dependency>
             <groupId>com.kumuluz.ee</groupId>
             <artifactId>kumuluzee-cdi-weld</artifactId>
@@ -31,6 +32,15 @@
         <dependency>
             <groupId>si.fri.rso.skupina15</groupId>
             <artifactId>entities</artifactId>
+        </dependency>
+        <dependency>
+            <artifactId>kumuluzee-logs-log4j2</artifactId>
+            <groupId>com.kumuluz.ee.logs</groupId>
+        </dependency>
+        <dependency>
+            <groupId>com.kumuluz.ee.logs</groupId>
+            <artifactId>kumuluzee-logs-common</artifactId>
+            <version>1.4.2</version>
         </dependency>
     </dependencies>
 </project>
